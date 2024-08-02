@@ -3,6 +3,7 @@ package com.example.snake
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import com.example.snake.game.Game
@@ -17,10 +18,15 @@ class MainActivity : ComponentActivity(), OnClickListener {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.layout_main)
-        val gameView = findViewById<GameView>(R.id.game_view)
 
-        game = Game(gameView, width = 20, height = 20, updatePeriod = 150L)
-        game?.start()
+        val gameView = findViewById<GameView>(R.id.game_view)
+        val startBtn = findViewById<Button>(R.id.btn_start)
+
+        startBtn.setOnClickListener {
+            startBtn.setText(R.string.restart)
+            game = Game(gameView, width = 20, height = 20, updatePeriod = 150L)
+            game?.start()
+        }
     }
 
     override fun onClick(view: View?) {
