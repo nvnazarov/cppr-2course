@@ -6,4 +6,7 @@
     <string name="btn_down">DOWN</string>
     <string name="start">START</string>
     <string name="restart">RESTART</string>
+    <string name="edit_width">Width</string>
+    <string name="edit_height">Height</string>
+    <string name="edit_default">10</string>
 </resources>

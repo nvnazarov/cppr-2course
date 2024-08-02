@@ -6,12 +6,42 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:textColor="#9C27B0" />
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/edit_width"
+            android:inputType="number"
+            android:numeric="integer"
+            android:text="@string/edit_default" />
+
+        <EditText
+            android:id="@+id/edit_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/edit_height"
+            android:inputType="number"
+            android:numeric="integer"
+            android:text="@string/edit_default" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textColor="#9C27B0" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
